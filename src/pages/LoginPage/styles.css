@@ -1,0 +1,30 @@
+.loginPageBaseContainer {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, var(--baseColor), var(--baseColorDark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginPageContentBaseContainer {
+  padding: 20px;
+  background-color: var(--whiteColor);
+  box-shadow: 0px 0px 20px var(--whiteColor);
+  border-radius: 20px;
+  border: 1px solid var(--borderColor);
+}
+
+.loginPageContentTitleContainer {
+  font-size: smaller;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.loginPageContentInputContainer {
+}
+
+.loginPageContentButtonContainer {
+}
+
+.loginPageContentRegisterContainer {
+}
