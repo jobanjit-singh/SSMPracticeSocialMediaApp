@@ -1,2 +1,14 @@
 .customInputBaseContainer {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--borderColor);
+}
+
+.customInputBaseContainer input {
+  border: none;
+  background-color: transparent;
+}
+
+.customInputBaseContainer input:focus {
+  outline: none;
 }
