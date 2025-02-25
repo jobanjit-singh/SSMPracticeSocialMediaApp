@@ -2,13 +2,25 @@
   padding: 10px;
   border-radius: 10px;
   border: 1px solid var(--borderColor);
+  display: flex;
+  gap: 4px;
 }
 
-.customInputBaseContainer input {
+.customInputIconContainer {
+}
+
+.customInputInputContainer {
+  flex: 1;
+}
+
+.customInputInputContainer input {
   border: none;
   background-color: transparent;
 }
 
-.customInputBaseContainer input:focus {
+.customInputInputContainer input:focus {
   outline: none;
+}
+
+.customInputPasswordContainer {
 }
