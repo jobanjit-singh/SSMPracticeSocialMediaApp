@@ -9,6 +9,8 @@ function CustomInput({
   Icon,
   iconColor,
   isSecureEntry = false,
+  inputValue,
+  onChangeText,
 }) {
   const [showText, setShowText] = useState(false);
 
@@ -19,8 +21,10 @@ function CustomInput({
       </div>
       <div className="customInputInputContainer">
         <input
+          value={inputValue}
           type={isSecureEntry ? (showText ? "text" : "password") : type}
           placeholder={placeholder}
+          onChange={onChangeText}
         />
       </div>
       {isSecureEntry && (

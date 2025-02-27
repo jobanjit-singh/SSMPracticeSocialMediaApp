@@ -8,18 +8,26 @@ import { FaKey } from "react-icons/fa";
 function LoginPage() {
   // let count = 0;
   // const [count, setCount] = useState(0);
+
+  const [email, setEmail] = useState("@gmail.com");
+
   return (
     <div className="loginPageBaseContainer">
       <div className="loginPageContentBaseContainer">
         <div className="loginPageContentTitleContainer">
           <h1>Let's Connect</h1>
-          <h4>Login</h4>
+          <h4>{`Welcome ${email}`}</h4>
         </div>
         <div className="loginPageContentInputContainer">
           <CustomInput
             type={"email"}
             placeholder={"Enter Email"}
             Icon={FaUserAlt}
+            inputValue={email}
+            onChangeText={(e) => {
+              // alert(e.target.value)
+              setEmail(e.target.value);
+            }}
           />
           <CustomInput
             type="password"
