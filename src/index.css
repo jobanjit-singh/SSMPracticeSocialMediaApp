@@ -3,7 +3,9 @@
   --baseColorDark: #01191a;
   --secondaryColor: #f0f7f4;
   --whiteColor: #ffffff;
+  --whiteColorDim: #ffffff18;
   --blackColor: #000000;
+  --blackColorDim: #00000099;
   --borderColor: #dadada;
 }
 
