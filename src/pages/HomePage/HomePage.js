@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ASSETS from "../../assets";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import COLOR from "../../config/color";
@@ -5,6 +6,8 @@ import "./styles.css";
 import { GiFullPizza } from "react-icons/gi";
 
 function HomePage() {
+  const [name, setName] = useState("");
+
   return (
     <div
       className="baseContainer"
@@ -18,7 +21,8 @@ function HomePage() {
       <img src={ASSETS.homePageImage} alt="" /> */}
 
       <div className="contentBaseContainer">
-        <h1>PIZZA</h1>
+        <h1>{name}</h1>
+        <input type="text" />
         <GiFullPizza className="icon" />
         <CustomButton
           backgroundColor={COLOR.secondSecondaryColor}

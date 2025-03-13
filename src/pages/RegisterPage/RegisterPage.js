@@ -1,16 +1,23 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import CustomInput from "../../components/CustomInput/CustomInput";
-import { auth } from "../../firebase";
+import { auth, database } from "../../firebase";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ref, set } from "firebase/database";
 
 function RegisterPage() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [buttonText, setButtonText] = useState("Register");
   const navigate = useNavigate();
+
+  const saveUserDetails = (data) => {
+    set(ref(database, `users/${data.uid}`), data);
+    navigate("/login");
+  };
 
   const handleRegister = async () => {
     try {
@@ -27,7 +34,12 @@ function RegisterPage() {
         );
         setButtonText("Register");
         if (response.user.uid) {
-          navigate("/login");
+          const userData = {
+            uid: response.user.uid,
+            email: response.user.email,
+            name: name,
+          };
+          saveUserDetails(userData);
         } else {
           alert("Failed to register");
           setEmail("");
@@ -47,6 +59,11 @@ function RegisterPage() {
   return (
     <div>
       <h1>Register Page</h1>
+      <CustomInput
+        placeholder={"name"}
+        inputValue={name}
+        onChangeText={(e) => setName(e.target.value)}
+      />
       <CustomInput
         placeholder={"Email"}
         inputValue={email}
