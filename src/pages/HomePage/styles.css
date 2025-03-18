@@ -1,4 +1,4 @@
-.baseContainer {
+/* .baseContainer {
   width: 100%;
   height: 100vh;
   background-color: var(--baseColor);
@@ -48,4 +48,19 @@
 
 .contentBaseContainer .icon:hover {
   transform: rotate(360deg);
+} */
+
+.homePageBaseContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.homePageNavbarBaseContainer {
+}
+
+.homePageContentBaseContainer {
+  flex: 1;
+  background-color: beige;
 }

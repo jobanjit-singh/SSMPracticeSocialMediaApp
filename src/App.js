@@ -3,11 +3,20 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import HomePage from "./pages/HomePage/HomePage";
+import LandingPage from "./pages/HomePage/pages/LandingPage/LandingPage";
+import AboutPage from "./pages/HomePage/pages/AboutPage/AboutPage";
+import ProductPage from "./pages/HomePage/pages/ProductPage/ProductPage";
+import BlogPage from "./pages/HomePage/pages/BlogPage/BlogPage";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage />}>
+          <Route path="/home" element={<LandingPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/product" element={<ProductPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+        </Route>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
       </Routes>
