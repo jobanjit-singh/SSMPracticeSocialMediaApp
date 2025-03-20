@@ -1,14 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ASSETS from "../../assets";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import COLOR from "../../config/color";
 import "./styles.css";
 import { GiFullPizza } from "react-icons/gi";
 import CustomNavbar from "../../components/CustomNavbar/CustomNavbar";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 function HomePage() {
   const [name, setName] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const uid = localStorage.getItem("uid");
+    if (!uid) {
+      navigate("/login");
+    }
+  }, []);
 
   return (
     // <div

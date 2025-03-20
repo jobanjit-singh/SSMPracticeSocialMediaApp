@@ -4,12 +4,17 @@ import COLOR from "../../config/color";
 import "./styles.css";
 import { FaUserAlt } from "react-icons/fa";
 import { FaKey } from "react-icons/fa";
+import CustomButton from "../../components/CustomButton/CustomButton";
 
 function LoginPage() {
   // let count = 0;
   // const [count, setCount] = useState(0);
 
   const [email, setEmail] = useState("@gmail.com");
+
+  const handleLogin = () => {
+    localStorage.setItem("uid", "ahlsdfkljhasdkljfhjaklgshdfl");
+  };
 
   return (
     <div className="loginPageBaseContainer">
@@ -43,6 +48,7 @@ function LoginPage() {
           >
             Increment
           </button> */}
+          <CustomButton onClick={handleLogin} />
         </div>
         <div className="loginPageContentButtonContainer"></div>
         <div className="loginPageContentRegisterContainer"></div>

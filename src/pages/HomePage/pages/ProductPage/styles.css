@@ -1,0 +1,15 @@
+.productPageBaseContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productPageChatBaseContainer {
+}
+
+.productChatContainer {
+}
+
+.productStatusContainer {
+}
