@@ -1,0 +1,13 @@
+.blogPageBaseContainer {
+  position: relative;
+  width: 100%;
+}
+
+.blogPageContentContainer {
+}
+
+.blogPageAddButtonContainer {
+  position: absolute;
+  bottom: 4%;
+  right: 2%;
+}

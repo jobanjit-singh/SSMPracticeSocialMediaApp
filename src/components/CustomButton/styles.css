@@ -4,10 +4,13 @@
   padding: 10px 20px;
   border-radius: 25px;
   transition: 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .customButtonBaseContainer:hover {
-  background-color: transparent !important;
+  background-color: var(--baseColor) !important;
   color: var(--whiteColor) !important;
   border: 1px solid var(--whiteColor);
   cursor: pointer;

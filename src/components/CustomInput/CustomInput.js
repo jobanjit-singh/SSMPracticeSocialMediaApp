@@ -11,6 +11,7 @@ function CustomInput({
   isSecureEntry = false,
   inputValue,
   onChangeText,
+  isTextArea = false,
 }) {
   const [showText, setShowText] = useState(false);
 
@@ -20,12 +21,16 @@ function CustomInput({
         {Icon ? <Icon color={iconColor} size={15} /> : null}
       </div>
       <div className="customInputInputContainer">
-        <input
-          value={inputValue}
-          type={isSecureEntry ? (showText ? "text" : "password") : type}
-          placeholder={placeholder}
-          onChange={onChangeText}
-        />
+        {isTextArea ? (
+          <textarea></textarea>
+        ) : (
+          <input
+            value={inputValue}
+            type={isSecureEntry ? (showText ? "text" : "password") : type}
+            placeholder={placeholder}
+            onChange={onChangeText}
+          />
+        )}
       </div>
       {isSecureEntry && (
         <div
