@@ -1,0 +1,17 @@
+.aboutUsBaseContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutUsChatContainer {
+  flex: 1;
+  background-color: antiquewhite;
+}
+
+.aboutUsMessageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}

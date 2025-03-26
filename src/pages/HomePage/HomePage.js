@@ -11,12 +11,12 @@ function HomePage() {
   const [name, setName] = useState("");
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const uid = localStorage.getItem("uid");
-    if (!uid) {
-      navigate("/login");
-    }
-  }, []);
+  // useEffect(() => {
+  //   const uid = localStorage.getItem("uid");
+  //   if (!uid) {
+  //     navigate("/login");
+  //   }
+  // }, []);
 
   return (
     // <div
