@@ -13,7 +13,7 @@ function LoginPage() {
   const [email, setEmail] = useState("@gmail.com");
 
   const handleLogin = () => {
-    localStorage.setItem("uid", "ahlsdfkljhasdkljfhjaklgshdfl");
+    localStorage.setItem("uid", "EpLNmyXt6ZfVOiSHV7t3nE7cEyI3");
   };
 
   return (

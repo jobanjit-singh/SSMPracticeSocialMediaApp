@@ -29,7 +29,11 @@ function CustomNavbar() {
         })}
       </div>
       <div className="customNavbarProfileContainer">
-        <FaCircleUser size={40} color={COLOR.blackColor} />
+        <FaCircleUser
+          size={40}
+          color={COLOR.blackColor}
+          onClick={() => navigate("/profile")}
+        />
       </div>
     </div>
   );

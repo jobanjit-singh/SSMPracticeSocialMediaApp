@@ -8,6 +8,7 @@ import AboutPage from "./pages/HomePage/pages/AboutPage/AboutPage";
 import ProductPage from "./pages/HomePage/pages/ProductPage/ProductPage";
 import BlogPage from "./pages/HomePage/pages/BlogPage/BlogPage";
 import { NewBlogPage } from "./pages/HomePage/pages/BlogPage/pages/NewBlogPage/NewBlogPage";
+import ProfilePage from "./pages/HomePage/pages/ProfilePage/ProfilePage";
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/product" element={<ProductPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Route>
         <Route path="/new-blog" element={<NewBlogPage />} />
         <Route path="/login" element={<LoginPage />} />
